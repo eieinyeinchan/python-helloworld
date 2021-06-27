@@ -32,8 +32,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: eieinyeinchan
-          password: Eenc@12345
+          username: ${YOUR DockerHub Username}
+          password: ${YOUR DockerHub Password}
       -
         name: Build and push
         uses: docker/build-push-action@v2
@@ -42,4 +42,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: eieinyeinchan/python-helloworld:latest
+          tags: YOUR_DOCKERHUB_REPONAME/python-helloworld:latest
